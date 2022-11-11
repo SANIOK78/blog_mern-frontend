@@ -6,7 +6,8 @@ import axios from "axios";
 const instance = axios.create({
     // On dit qu'on fait toujour la requete 
     // sur "localhost:4444"
-    baseURL: 'http://localhost:4444'
+    baseURL: process.env.REACT_APP_API_URL
+    // baseURL: 'http://localhost:4444'
 });
 
 

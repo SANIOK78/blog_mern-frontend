@@ -52,7 +52,8 @@ export const Home = () => {
                 title={obj.title}
                 // Affichage de l'image qu'on recupère depuis BackEnd: On va passer
                 // par une condition pour ne pas planter l'application
-                imageUrl={ obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : ""}                
+                imageUrl={ obj.imageUrl ? `${process.env.REACT_APP_API_URL}${obj.imageUrl}` : ""}                
+                // imageUrl={ obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : ""}                
                 user={obj.user}              
                 createdAt={obj.createdAt}
                 viewsCount={obj.viewsCount}

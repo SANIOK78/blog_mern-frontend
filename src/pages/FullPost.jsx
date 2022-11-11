@@ -44,7 +44,8 @@ export const FullPost = () => {
         title={data.title}
         // Affichage de l'image qu'on recupère depuis BackEnd: On passe par un 
         // test => s'il y a un img on l'affiche sinon on affiche espace vide
-        imageUrl={ data.imageUrl ? `http://localhost:4444${data.imageUrl}` : ""}
+        imageUrl={ data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` : ""}
+        // imageUrl={ data.imageUrl ? `http://localhost:4444${data.imageUrl}` : ""}
         user={data.user}
         createdAt={data.createdAt}
         viewsCount={data.viewsCount}
